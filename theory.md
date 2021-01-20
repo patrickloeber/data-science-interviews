@@ -1,15 +1,15 @@
 # Theoretical interview questions
 
-* The list of questions is based on this post: https://hackernoon.com/160-data-science-interview-questions-415s3y2a
-* Legend: 👶 easy ‍⭐️ medium 🚀 expert
-* Do you know how to answer questions without answers? Please create a PR
-* See an error? Please create a PR with fix
+- The list of questions is based on this post: https://hackernoon.com/160-data-science-interview-questions-415s3y2a
+- Legend: 👶 easy ‍⭐️ medium 🚀 expert
+- Do you know how to answer questions without answers? Please create a PR
+- See an error? Please create a PR with fix
 
 ## Supervised machine learning
 
 **What is supervised machine learning? 👶**
 
-A case when we have both features (the matrix X) and the labels (the vector y) 
+A case when we have both features (the matrix X) and the labels (the vector y)
 
 <br/>
 
@@ -23,7 +23,7 @@ Regression is a part of supervised ML. Regression models predict a real number
 
 **What is linear regression? When do we use it? 👶**
 
-Linear regression is a model that assumes a linear relationship between the input variables (X) and the single output variable (y). 
+Linear regression is a model that assumes a linear relationship between the input variables (X) and the single output variable (y).
 
 With a simple equation:
 
@@ -31,7 +31,7 @@ With a simple equation:
 y = B0 + B1*x1 + ... + Bn * xN
 ```
 
-B is regression coefficients, x values are the independent (explanatory) variables  and y is dependent variable. 
+B is regression coefficients, x values are the independent (explanatory) variables and y is dependent variable.
 
 The case of one explanatory variable is called simple linear regression. For more than one explanatory variable, the process is called multiple linear regression.
 
@@ -51,7 +51,16 @@ y = B0 + B1*x1 + ... + Bn * xN
 
 **What’s the normal distribution? Why do we care about it? 👶**
 
-Answer here
+A normal distribution is a probability distribution that is symmetric about the mean, showing that data points near the mean are more frequent in occurrences than data far away from the mean. When plotted in a graph, normal distribution appears as a bell curve.
+
+Some properties of normal distribution:
+
+- Symmetric about the center
+- The mean, mode, median all have the same value
+- Half of the data values are distributed to left part of the center and the other half is distributed to the right side of the center.
+
+The normal distribution can be used to describe many natural phenomena happening around us such as blood pressure, heights, and weights, standardized test scores such as SAT, GRE, and so on. For example, The standard normal distribution can help a student figure out how well she is doing on a certain subject relative to her peers. For instance, if her score is higher than the mean score, she might think she is doing good in that particular subject and the opposite is true too. To draw a more clear picture, a standard deviation is used to determine how far spread the data is. For instance, if she gets 80% in Chemistry and 93% in History, she might assume she is better in History than in Chemistry. But since Chemistry is a difficult subject, most of the students scored under
+75%. And since History is an easier subject, the mean score on History was 92%. From the above analysis, it can be inferred that she did far better in Chemistry compared to her peers than she did in History.
 
 <br/>
 
@@ -103,7 +112,6 @@ Answer here
 
 <br/>
 
-
 ## Validation
 
 **What is overfitting? 👶**
@@ -141,7 +149,6 @@ Answer here
 Answer here
 
 <br/>
-
 
 ## Classification
 
@@ -183,38 +190,38 @@ Accuracy is a metric for evaluating classification models. It is calculated by d
 
 **Is accuracy always a good metric? 👶**
 
-Accuracy is not a good performance metric when there is imbalance in the dataset. For example, in binary classification with 95% of A class and 5% of B class, prediction accuracy can be 95%. In case of imbalance dataset, we need to choose Precision, recall, or F1 Score depending on the problem we are trying to solve. 
+Accuracy is not a good performance metric when there is imbalance in the dataset. For example, in binary classification with 95% of A class and 5% of B class, prediction accuracy can be 95%. In case of imbalance dataset, we need to choose Precision, recall, or F1 Score depending on the problem we are trying to solve.
 
 <br/>
 
 **What is the confusion table? What are the cells in this table? 👶**
 
-Confusion table (or confusion matrix) shows how many True positives (TP), True Negative (TN), False Positive (FP) and False Negative (FN) model has made. 
+Confusion table (or confusion matrix) shows how many True positives (TP), True Negative (TN), False Positive (FP) and False Negative (FN) model has made.
 
-||                |     Actual   |        Actual |
-|:---:|   :---:        |     :---:    |:---:          |
-||                | Positive (1) | Negative (0)  |
-|Predicted|   Positive (1) | TP           | FP            |
-|Predicted|   Negative (0) | FN           | TN            |
+|           |              |    Actual    |    Actual    |
+| :-------: | :----------: | :----------: | :----------: |
+|           |              | Positive (1) | Negative (0) |
+| Predicted | Positive (1) |      TP      |      FP      |
+| Predicted | Negative (0) |      FN      |      TN      |
 
-* True Positives (TP): When the actual class of the observation is 1 (True) and the prediction is 1 (True)
-* True Negative (TN): When the actual class of the observation is 0 (False) and the prediction is 0 (False)
-* False Positive (FP): When the actual class of the observation is 0 (False) and the prediction is 1 (True)
-* False Negative (FN): When the actual class of the observation is 1 (True) and the prediction is 0 (False)
+- True Positives (TP): When the actual class of the observation is 1 (True) and the prediction is 1 (True)
+- True Negative (TN): When the actual class of the observation is 0 (False) and the prediction is 0 (False)
+- False Positive (FP): When the actual class of the observation is 0 (False) and the prediction is 1 (True)
+- False Negative (FN): When the actual class of the observation is 1 (True) and the prediction is 0 (False)
 
-Most of the performance metrics for classification models are based on the values of the confusion matrix. 
+Most of the performance metrics for classification models are based on the values of the confusion matrix.
 
 <br/>
 
 **What are precision, recall, and F1-score? 👶**
 
-* Precision and recall are classification evaluation metrics:
-* P = TP / (TP + FP) and R = TP / (TP + FN).
-* Where TP is true positives, FP is false positives and FN is false negatives
-* In both cases the score of 1 is the best: we get no false positives or false negatives and only true positives.
-* F1 is a combination of both precision and recall in one score:
-* F1 = 2 * PR / (P + R). 
-* Max F score is 1 and min is 0, with 1 being the best.
+- Precision and recall are classification evaluation metrics:
+- P = TP / (TP + FP) and R = TP / (TP + FN).
+- Where TP is true positives, FP is false positives and FN is false negatives
+- In both cases the score of 1 is the best: we get no false positives or false negatives and only true positives.
+- F1 is a combination of both precision and recall in one score:
+- F1 = 2 \* PR / (P + R).
+- Max F score is 1 and min is 0, with 1 being the best.
 
 <br/>
 
@@ -271,7 +278,6 @@ Answer here
 Answer here
 
 <br/>
-
 
 ## Regularization
 
@@ -365,7 +371,6 @@ Answer here
 
 <br/>
 
-
 ## Feature selection
 
 **What is feature selection? Why do we need it? 👶**
@@ -397,7 +402,6 @@ Answer here
 Answer here
 
 <br/>
-
 
 ## Decision trees
 
@@ -436,7 +440,6 @@ Answer here
 Answer here
 
 <br/>
-
 
 ## Random forest
 
@@ -494,7 +497,6 @@ Answer here
 
 <br/>
 
-
 ## Gradient boosting
 
 **What is gradient boosting trees? ‍⭐️**
@@ -545,8 +547,6 @@ Answer here
 
 <br/>
 
-
-
 ## Parameter tuning
 
 **Which parameter tuning strategies (in general) do you know? ‍⭐️**
@@ -560,7 +560,6 @@ Answer here
 Answer here
 
 <br/>
-
 
 ## Neural networks
 
@@ -617,7 +616,6 @@ Answer here
 Answer here
 
 <br/>
-
 
 ## Optimization in neural networks
 
@@ -693,7 +691,6 @@ Answer here
 
 <br/>
 
-
 ## Neural networks for computer vision
 
 **How we can use neural nets for computer vision? ‍⭐️**
@@ -761,7 +758,6 @@ Answer here
 Answer here
 
 <br/>
-
 
 ## Text classification
 
@@ -849,7 +845,6 @@ Answer here
 
 <br/>
 
-
 ## Clustering
 
 **What is unsupervised learning? 👶**
@@ -860,7 +855,7 @@ Unsupervised learning aims to detect paterns in data where no labels are given.
 
 **What is clustering? When do we need it? 👶**
 
-Clustering algorithms group objects such that similar feature points are put into the same groups (clusters) and dissimilar feature points are put into different clusters. 
+Clustering algorithms group objects such that similar feature points are put into the same groups (clusters) and dissimilar feature points are put into different clusters.
 
 <br/>
 
@@ -875,41 +870,41 @@ Clustering algorithms group objects such that similar feature points are put int
 
 **How to select K for K-means? ‍⭐️**
 
-* Domain knowledge, i.e. an expert knows the value of k
-* Elbow method: compute the clusters for different values of k, for each k, calculate the total within-cluster sum of square, plot the sum according to the number of clusters and use the band as the number of clusters.
-* Average silhouette method: compute the clusters for different values of k, for each k, calculate the average silhouette of observations, plot the silhouette according to the number of clusters and select the maximum as the number of clusters.
+- Domain knowledge, i.e. an expert knows the value of k
+- Elbow method: compute the clusters for different values of k, for each k, calculate the total within-cluster sum of square, plot the sum according to the number of clusters and use the band as the number of clusters.
+- Average silhouette method: compute the clusters for different values of k, for each k, calculate the average silhouette of observations, plot the silhouette according to the number of clusters and select the maximum as the number of clusters.
 
 <br/>
 
 **What are the other clustering algorithms do you know? ‍⭐️**
 
-* k-medoids: Takes the most central point instead of the mean value as the center of the cluster. This makes it more robust to noise.
-* Agglomerative Hierarchical Clustering (AHC): hierarchical clusters combining the nearest clusters starting with each point as its own cluster.
-* DIvisive ANAlysis Clustering (DIANA): hierarchical clustering starting with one cluster containing all points and splitting the clusters until each point describes its own cluster.
-* Density-Based Spatial Clustering of Applications with Noise (DBSCAN): Cluster defined as maximum set of density-connected points.
+- k-medoids: Takes the most central point instead of the mean value as the center of the cluster. This makes it more robust to noise.
+- Agglomerative Hierarchical Clustering (AHC): hierarchical clusters combining the nearest clusters starting with each point as its own cluster.
+- DIvisive ANAlysis Clustering (DIANA): hierarchical clustering starting with one cluster containing all points and splitting the clusters until each point describes its own cluster.
+- Density-Based Spatial Clustering of Applications with Noise (DBSCAN): Cluster defined as maximum set of density-connected points.
 
 <br/>
 
 **Do you know how DBScan works? ‍⭐️**
 
-* Two input parameters epsilon (neighborhood radius) and minPts (minimum number of points in an epsilon-neighborhood)
-* Cluster defined as maximum set of density-connected points.
-* Points p_j and p_i are density-connected w.r.t. epsilon and minPts if there is a point o such that both, i and j are density-reachable from o w.r.t. epsilon and minPts.
-* p_j is density-reachable from p_i w.r.t. epsilon, minPts if there is a chain of points p_i -> p_i+1 -> p_i+x = p_j such that p_i+x is directly density-reachable from p_i+x-1.
-* p_j is a directly density-reachable point of the neighborhood of p_i if dist(p_i,p_j) <= epsilon.
+- Two input parameters epsilon (neighborhood radius) and minPts (minimum number of points in an epsilon-neighborhood)
+- Cluster defined as maximum set of density-connected points.
+- Points p_j and p_i are density-connected w.r.t. epsilon and minPts if there is a point o such that both, i and j are density-reachable from o w.r.t. epsilon and minPts.
+- p_j is density-reachable from p_i w.r.t. epsilon, minPts if there is a chain of points p_i -> p_i+1 -> p_i+x = p_j such that p_i+x is directly density-reachable from p_i+x-1.
+- p_j is a directly density-reachable point of the neighborhood of p_i if dist(p_i,p_j) <= epsilon.
 
 <br/>
 
 **When would you choose K-means and when DBScan? ‍⭐️**
 
-* DBScan is more robust to noise.
-* DBScan is better when the amount of clusters is difficult to guess.
-* K-means has a lower complexity, i.e. it will be much faster, especially with a larger amount of points.
+- DBScan is more robust to noise.
+- DBScan is better when the amount of clusters is difficult to guess.
+- K-means has a lower complexity, i.e. it will be much faster, especially with a larger amount of points.
 
 <br/>
 
-
 ## Dimensionality reduction
+
 **What is the curse of dimensionality? Why do we care about it? ‍⭐️**
 
 Answer here
@@ -927,7 +922,6 @@ Answer here
 Answer here
 
 <br/>
-
 
 ## Ranking and search
 
@@ -997,7 +991,6 @@ Answer here
 
 <br/>
 
-
 ## Recommender systems
 
 **What is a recommender system? 👶**
@@ -1035,7 +1028,6 @@ Answer here
 Answer here
 
 <br/>
-
 
 ## Time series
 
@@ -1080,5 +1072,3 @@ Answer here
 Answer here
 
 <br/>
-
-
